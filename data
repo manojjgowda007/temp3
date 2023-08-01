@@ -7,10 +7,12 @@ pipeline {
        }
     }
       stage('DEPLOY') {
+	  parallel {
          steps {
          echo "this is deploy stage"
        }
-    } 
+     } 
+	}
       stage('TEST') {
          steps {
          echo "this is test stage"
