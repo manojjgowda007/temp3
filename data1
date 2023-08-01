@@ -1,1 +1,29 @@
-jhvcjkhsajlkhakch
+pipeline {
+   agent any
+   stages {
+      stage('BUILD') {
+      parallel {
+      stage('BUILD1') {
+         steps {
+         echo "this is build stage"
+       }
+    }
+      stage('BUILD2') {
+         steps {
+         echo "this is build stage"
+       }
+    }
+  }
+ }
+      stage('DEPLOY') {
+         steps {
+         echo "this is deploy stage"
+       }
+    } 
+      stage('TEST') {
+         steps {
+         echo "this is test stage"
+       }
+    }
+ }
+}
