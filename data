@@ -5,15 +5,12 @@ pipeline {
          steps {
          echo "this is build stage"
        }
-    }
-         stage {
-	  parallel 
+    } 
           stage('DEPLOY') {
          steps {
          echo "this is deploy stage"
        }
      } 
-   }
       stage('TEST') {
          steps {
          echo "this is test stage"
