@@ -6,7 +6,8 @@ pipeline {
          echo "this is build stage"
        }
     }
-	  parallel {
+         stage {
+	  parallel 
           stage('DEPLOY') {
          steps {
          echo "this is deploy stage"
