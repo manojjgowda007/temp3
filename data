@@ -6,13 +6,13 @@ pipeline {
          echo "this is build stage"
        }
     }
-      stage('DEPLOY') {
 	  parallel {
+          stage('DEPLOY') {
          steps {
          echo "this is deploy stage"
        }
      } 
-}
+  }
       stage('TEST') {
          steps {
          echo "this is test stage"
